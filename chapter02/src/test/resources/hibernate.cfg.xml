@@ -4,6 +4,8 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
+        <!-- c3p0 configuration -->
+        <property name="c3p0.timeout">10</property>
         <!--  Database connection settings  -->
         <property name="connection.driver_class">org.h2.Driver</property>
         <property name="connection.url">jdbc:h2:./db2</property>

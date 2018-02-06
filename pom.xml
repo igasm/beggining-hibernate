@@ -34,7 +34,7 @@
             <artifactId>h2</artifactId>
             <version>1.4.196</version>
         </dependency>
-        <!-- for databse connection pool management -->
+        <!-- for database connection pool management -->
         <dependency>
             <groupId>c3p0</groupId>
             <artifactId>c3p0</artifactId>
