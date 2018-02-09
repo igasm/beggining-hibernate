@@ -9,9 +9,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
-
-public class PersonTest {
+public class RankingTest {
 
   SessionFactory factory;
   HelperClass helperClass;
@@ -26,21 +24,13 @@ public class PersonTest {
   }
 
   @Test
-  public void testSavePerson() {
-    try(Session session = factory.openSession()){
+  public void testSaveRanking(){
+    try (Session session = factory.openSession()){
       Transaction tx = session.beginTransaction();
-      session.save(new Person("J. C. Smell"));
-      tx.commit();
-    }
-  }
 
-  @Test(dependsOnMethods = "testSavePerson")
-  public void testFindingPerson() {
-    try(Session session = factory.openSession()){
-      Transaction tx = session.beginTransaction();
-      Person person = helperClass.findPerson(session, "J. C. Smell");
-      assertEquals(person.getName(), "J. C. Smell");
-      tx.commit();
+      Person person = helperClass.savePerson(session, "J. C. Smell");
+      Person observer = helperClass.savePerson(session, "Drew Lombardo");
+      Skill skill = saveSkill(session, "Java");
     }
   }
 
