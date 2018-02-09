@@ -45,4 +45,5 @@ public class Message {
         ", text='" + getText() + '\'' +
         '}';
   }
+
 }
