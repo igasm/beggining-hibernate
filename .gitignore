@@ -6,4 +6,5 @@
 *.jar
 *.iml
 *.mv.db
+*.trace.db
 target/

@@ -1,10 +1,29 @@
 package chapter03.simple;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
 public class Ranking {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
+
+  @OneToOne
   private Person subject;
+
+  @OneToOne
   private Person observer;
+
+  @OneToOne
   private Skill skill;
+
+  @Column
   private Integer ranking;
 
   public Ranking() {

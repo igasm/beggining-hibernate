@@ -21,4 +21,11 @@ public class HelperClass {
     return person;
   }
 
+  Skill saveSkill(Session session, String skillName) {
+    Skill skill = new Skill(skillName);
+    session.save(skill);
+    System.out.println("saving skill: " + skill.toString());
+    return skill;
+  }
+
 }

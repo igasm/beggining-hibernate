@@ -14,8 +14,14 @@
         <property name="dialect">org.hibernate.dialect.H2Dialect</property>
         <!--  Echo all executed SQL to stdout  -->
         <property name="show_sql">true</property>
+        <!-- Log the "JDBC queries" -->
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property>
+
         <!--  Drop and re-create the database schema on startup  -->
         <property name="hbm2ddl.auto">create-drop</property>
         <mapping class="chapter03.simple.Person"/>
+        <mapping class="chapter03.simple.Skill"/>
+        <mapping class="chapter03.simple.Ranking"/>
     </session-factory>
 </hibernate-configuration>
