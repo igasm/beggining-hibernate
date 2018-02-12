@@ -1,5 +1,6 @@
 package chapter03.simple;
 
+import chapter03.HelperClass;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

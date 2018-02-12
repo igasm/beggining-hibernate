@@ -1,15 +1,15 @@
 package chapter03.simple;
 
+import chapter03.HelperClass;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import javax.management.Query;
 import java.util.IntSummaryStatistics;
 import java.util.stream.Collectors;
 
@@ -21,7 +21,7 @@ public class RankingTest {
   SessionFactory factory;
   HelperClass helperClass;
 
-  @BeforeClass
+  @BeforeMethod
   public void setup(){
     StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
         .configure()
