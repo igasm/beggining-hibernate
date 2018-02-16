@@ -26,9 +26,6 @@ public class Ranking {
   @Column
   private Integer ranking;
 
-  public Ranking() {
-  }
-
   public Person getSubject() {
     return subject;
   }
